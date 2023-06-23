@@ -7,9 +7,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("https://fullstack-nextjs-tutorial-sandy.vercel.app/") // uses connection pooling
-  directUrl = env("https://fullstack-nextjs-tutorial-sandy.vercel.app/") // uses a direct connection
-  shadowDatabaseUrl = env("https://fullstack-nextjs-tutorial-sandy.vercel.app/") // used for migrations
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
 model Post {
